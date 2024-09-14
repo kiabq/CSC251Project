@@ -35,43 +35,53 @@ public class Policy {
        this.smokingStatus = smokingStatus;
     }
 
-    public void setPolicyNumber () {}
+    /* Mutators and Accessor Methods */
+    public void setPolicyNumber (int policyNumber) { this.policyNumber = policyNumber; }
     public int getPolicyNumber() {
-        return 0;
+        return policyNumber;
     }
 
-    public void setAge() {}
-    public int getAge() {
-        return 0;
+    public void setAge(int age) { this.age = age; }
+    public int getAge() { 
+        return age;
     }
 
-    public void setHeightInches() {}
+    public void setHeightInches(int height) { this.heightInches = height; }
     public int getHeightInches() {
-        return 0;
+        return heightInches;
     }
 
-    public void setWeightPounds() {}
+    public void setWeightPounds(double weight) { this.weightPounds = weight; }
     public double getWeightPounds() {
+        return weightPounds;
+    }
+
+    public void setProviderName(String providerName) { this.providerName = providerName; }
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) { this.lastName = lastName; }
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setSmokingStatus(String smokingStatus) { this.smokingStatus = smokingStatus; }
+    public String getSmokingStatus() {
+        return smokingStatus;
+    }
+
+    /* Class Methods */
+    public double calculatePolicyHolderBMI() {
         return 0.0;
     }
 
-    public void setProvideName() {}
-    public String getProviderName() {
-        return "";
-    }
-
-    public void setFirstName() {}
-    public String getFirstName() {
-        return "";
-    }
-
-    public void setLastName() {}
-    public String getLastName() {
-        return "";
-    }
-
-    public void setSmokingStatus() {}
-    public String getSmokingStatus() {
-        return "";
+    public double calculatePolicyCost() {
+        return 0.0;
     }
 }
