@@ -1,13 +1,13 @@
 public class Policy {
-    private int policyNumber, age, heightInches;
-    private double weightPounds;
+    private int policyNumber, age;
+    private double heightInches, weightPounds;
     // note: smokingStatus would probably be best as an enum?
     private String providerName, firstName, lastName, smokingStatus;
 
     Policy() {
         policyNumber = 0;
         age = 0;
-        heightInches = 0;
+        heightInches = 0.0;
         weightPounds = 0.0;
         providerName = "";
         firstName = "";
@@ -18,7 +18,7 @@ public class Policy {
     Policy(
         int policyNumber, 
         int age, 
-        int heightInches,
+        double heightInches,
         double weightPounds,
         String providerName,
         String firstName,
@@ -46,8 +46,8 @@ public class Policy {
         return age;
     }
 
-    public void setHeightInches(int height) { this.heightInches = height; }
-    public int getHeightInches() {
+    public void setHeightInches(double height) { this.heightInches = height; }
+    public double getHeightInches() {
         return heightInches;
     }
 
