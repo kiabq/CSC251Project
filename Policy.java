@@ -78,10 +78,25 @@ public class Policy {
 
     /* Class Methods */
     public double calculatePolicyHolderBMI() {
-        return 0.0;
+        return (weightPounds * 703) / (heightInches * heightInches);
     }
 
     public double calculatePolicyCost() {
-        return 0.0;
+        int baseFee = 600;
+        double bmi = calculatePolicyHolderBMI();
+
+        if (age > 50) {
+            baseFee += 75;
+        }
+
+        if (smokingStatus != "non-smoker") {
+            baseFee += 100;
+        }
+
+        if (bmi > 35) {
+            baseFee += (bmi - 35) * 20;
+        }
+
+        return baseFee;
     }
 }
