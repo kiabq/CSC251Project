@@ -1,10 +1,10 @@
-public class Policy {
+public class InsurancePolicy {
     private int policyNumber, age;
     private double heightInches, weightPounds;
     // note: smokingStatus would probably be best as an enum?
     private String providerName, firstName, lastName, smokingStatus;
 
-    Policy() {
+    InsurancePolicy() {
         policyNumber = 0;
         age = 0;
         heightInches = 0.0;
@@ -15,7 +15,7 @@ public class Policy {
         smokingStatus = "non-smoker";
     }
 
-    Policy(
+    InsurancePolicy(
         int policyNumber, 
         int age, 
         double heightInches,
@@ -82,14 +82,14 @@ public class Policy {
     }
 
     public double calculatePolicyCost() {
-        int baseFee = 600;
+        double baseFee = 600;
         double bmi = calculatePolicyHolderBMI();
 
         if (age > 50) {
             baseFee += 75;
         }
 
-        if (smokingStatus != "non-smoker") {
+        if (smokingStatus.equals("smoker")) {
             baseFee += 100;
         }
 
