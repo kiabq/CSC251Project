@@ -178,4 +178,20 @@ public class InsurancePolicy {
 
         return baseFee;
     }
+
+    public String toString() {
+        return String.format(
+            "Policy Number: %d\nProvider Name: %s\nPolicyholder's First Name: %s\nPolicyholder's Last Name: %s\nPolicyholder's Age: %d\nPolicyholder's Smoking Status: %s\nPolicyholder's Height: %.1f inches\nPolicyholder's Weight: %.1f pounds\nPolicyholder's BMI: %.2f\nPolicy Price: $%.2f\n", 
+            this.getPolicyNumber(), 
+            this.getProviderName(),
+            this.getFirstName(),
+            this.getLastName(),
+            this.getAge(),
+            this.getSmokingStatus(),
+            this.getHeightInches(),
+            this.getWeightPounds(),
+            this.calculatePolicyHolderBMI(),
+            this.calculatePolicyCost()
+        );
+    }
 }
