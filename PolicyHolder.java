@@ -1,6 +1,6 @@
 public class PolicyHolder {
     public static int policyHolderCount = 0;
-    private InsurancePolicy policyHolder;
+    private InsurancePolicy policyHolder = new InsurancePolicy();
 
     PolicyHolder(InsurancePolicy policy) {
        policyHolder = policy;
